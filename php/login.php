@@ -2,21 +2,24 @@
     header('Content-type: application/json');
     $connect = mysqli_connect("localhost", "root", "", "wmsu"); 
   
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
 
-    $sql = "SELECT * FROM overview";
+    $sql = "SELECT * FROM account WHERE user = '$user' AND pass = '$pass'";
     $result = mysqli_query($connect,$sql);
 
 
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            //echo "vr1: " . $row["vr1"]. " - vr2: " . $row["vr2"]. "<br>";
-            $banner = $row["ov_text"];
+            $banner = true;
         
         }
         // print_r($food);
+    } else{
+        $banner = false;
     }
     echo json_encode($banner);
-    
+   
 
 ?>

@@ -3,7 +3,7 @@
     $connect = mysqli_connect("localhost", "root", "", "wmsu"); 
   
 
-    $sql = "SELECT * FROM overview";
+    $sql = "SELECT * FROM offices WHERE offices_id = 9";
     $result = mysqli_query($connect,$sql);
 
 
@@ -11,12 +11,12 @@
         // output data of each row
         while($row = $result->fetch_assoc()) {
             //echo "vr1: " . $row["vr1"]. " - vr2: " . $row["vr2"]. "<br>";
-            $banner = $row["ov_text"];
+            $banner = $row["office_text"];
         
         }
         // print_r($food);
     }
     echo json_encode($banner);
-    
+   
 
 ?>
