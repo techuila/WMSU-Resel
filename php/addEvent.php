@@ -22,7 +22,7 @@
             header('Refresh:.5; url=../index.php');
         }else{
             echo json_encode('Insert Failed');
-        }
+        }   
     }
     
 ?>

@@ -41,13 +41,14 @@ img{
 
 pre{
     background-color: transparent;
-    font-family: "Roboto";
-    font-size: 0.9em;    
-    border: none;
     white-space: -moz-pre-wrap; 
     white-space: pre-wrap; 
     word-wrap: break-word;
+    font-family: "Roboto";
+    text-align: justify;
     overflow: hidden;
+    font-size: 0.9em;    
+    border: none;
 }
 
 .navs{

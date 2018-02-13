@@ -51,9 +51,9 @@
                         $("#myLogin").modal("show");
                     }
                 },
-                error: function(a,b,c){
-                    console.log("Error: " + a + " " + b + " " + c);
-                }
+                    error: function(a,b,c){
+                        console.log("Error: " + a + " " + b + " " + c);
+                    }
             });
         }
 
@@ -105,55 +105,55 @@
         });
         document.getElementById('add1').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('organization-text','<img src="./img/'+f+'">');
+            insertAtCaret('organization-text','<center><img src="./img/'+f+'"></center>');
         };
         document.getElementById('add2').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('council-text','<img src="./img/'+f+'">');
+            insertAtCaret('council-text','<center><img src="./img/'+f+'"></center>');
         };
         document.getElementById('add10').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('rupid-text','<img src="./img/'+f+'">');
+            insertAtCaret('rupid-text','<center><img src="./img/'+f+'"></center>');
         };
         document.getElementById('add11').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('reoc-text','<img src="./img/'+f+'">');
+            insertAtCaret('reoc-text','<center><img src="./img/'+f+'"></center>');
         };
         document.getElementById('add12').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('it-text','<img src="./img/'+f+'">');
+            insertAtCaret('it-text','<center><img src="./img/'+f+'"></center>');
         };
         document.getElementById('add13').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('it-text','<img src="./img/'+f+'">');
+            insertAtCaret('it-text','<center><img src="./img/'+f+'"></center>');
         };
         document.getElementById('add14').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('epo-text','<img src="./img/'+f+'">');
+            insertAtCaret('epo-text','<center><img src="./img/'+f+'"></center>');
         };
         document.getElementById('add15').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('aepo-text','<img src="./img/'+f+'">');
+            insertAtCaret('aepo-text','<center><img src="./img/'+f+'"></center>');
         };
         document.getElementById('add16').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('handog-text','<img src="./img/'+f+'">');
+            insertAtCaret('handog-text','<center><img src="./img/'+f+'"></center>');
         };
         document.getElementById('add17').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('alumni-text','<img src="./img/'+f+'">');
+            insertAtCaret('alumni-text','<center><img src="./img/'+f+'"></center>');
         };
         document.getElementById('add18').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('public-text','<img src="./img/'+f+'">');
+            insertAtCaret('public-text','<center><img src="./img/'+f+'"></center>');
         };
         document.getElementById('add19').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('linkage-text','<img src="./img/'+f+'">');
+            insertAtCaret('linkage-text','<center><img src="./img/'+f+'"></center>');
         };
         document.getElementById('add20').onchange = function () {
             var f = this.value.replace(/.*[\/\\]/, '');
-            insertAtCaret('industry-text','<img src="./img/'+f+'">');
+            insertAtCaret('industry-text','<center><img src="./img/'+f+'"></center>');
         };
         $scope.disp = function(){
             $scope.secret = 0;
@@ -602,7 +602,7 @@
                 type: 'GET',
                 cache: false,
                 success: function(data){
-                    $('#rupid-text').text(data);
+                    $('#roec-text').text(data);
                     $('#hitme11').after($compile("<pre id='mama11' ng-hide='edit && success' style='line-height: 1.6em;'>"+ data +"</pre>")($scope));
                 },
                 error: function(a,b,c){
