@@ -18,6 +18,7 @@
         $scope.success = false;
         $scope.edit = true;
         $scope.aclicked = false;
+        $scope.udpate = false;
         
         function turncate(par){
             if(par.length > 350){
@@ -68,6 +69,7 @@
         }
 
         $scope.logout = function(){
+            $scope.update = false;
             localStorage.clear();
             location.reload();
             $scope.nav_click(0);
@@ -78,6 +80,11 @@
                 if(localStorage.getItem("success") != "true"){
                     $(".bg-l").css('visibility','visible');
                     $scope.log = true;
+                    $scope.$apply();
+                }else{
+                    $(".bg-l").css('visibility','visible');
+                    $scope.log = true;
+                    $scope.update = true;
                     $scope.$apply();
                 }
             }
