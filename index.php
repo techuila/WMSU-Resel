@@ -650,8 +650,6 @@
                 </div>
             </div>  
 
-`
-            <!-- LOGIN SECTION -->
             <div class="bg-l"></div>
             <center>
                 <form action="" class="form-group l-container" id="login">
