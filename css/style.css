@@ -322,7 +322,8 @@ footer a:hover{
     width: 100%;  
 }
 
-.bg-l{
+.bg-l,
+.bg-u{
     background-image: url('../img/_DSC7065-5.jpg');
     background-repeat: no-repeat;
     background-size: cover;

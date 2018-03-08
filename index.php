@@ -589,30 +589,36 @@
 
             <!-- Modal FOR LOGIN -->
             <div id="myLogin" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
+                <div class="modal-dialog">
 
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">{{ m_title }}</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>{{ m_body }}</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="checkLogin();">Ok</button>
-                            </div>
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">{{ m_title }}</h4>
                         </div>
-
+                        <div class="modal-body">
+                            <p>{{ m_body }}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="checkLogin();">Ok</button>
+                        </div>
                     </div>
+
+                </div>
             </div>  
 
 
+<<<<<<< HEAD
 
+=======
+            <!-- TAKI EL LOGIN AND UPDATE CHARD!!!! -->
+
+            <!-- LOGIN SECTION -->
+>>>>>>> faf97473560dcde75ddefb966138b38e5a461d21
             <div class="bg-l"></div>
             <center>
-                <form action="" class="form-group l-container" id="login">
+                <form action="" class="form-group l-container" id="login" ng-hide="update">
                     <img src="./img/wmsuresel.png" alt="WMSU RESEL LOGO" width="150" style="display: block;"><br>
                     <label for="">Username</label><br>
                     <input type="text" name="user" class="form-control" type="text"><br>
@@ -621,7 +627,17 @@
                     <input type="submit" class="btn myred" value="Login" ng-click="login();"><br>
                     <input type="button" class="btn myred" value="Cancel" ng-click="log = false;">                    
                 </form>
+                
+
+                <!-- ESTE EL UPDATE!!!! -->
+
+                <form action="" class="form-group l-container" id="update" ng-show="update">
+                    <img src="./img/wmsuresel.png" alt="WMSU RESEL LOGO" width="150" style="display: block;"><br>
+                    <input type="button" class="btn myred" value="Cancel" ng-click="log = false;">                                        
+                </form>
             </center>
+
+            
         </div>
 
         <!--Modal: Edit From-->
