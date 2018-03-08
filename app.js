@@ -18,7 +18,6 @@
         $scope.success = false;
         $scope.edit = true;
         $scope.aclicked = false;
-        $scope.udpate = false;
         
         function turncate(par){
             if(par.length > 350){
@@ -41,7 +40,7 @@
                     if(data == true){
                         success = true;
                         $scope.m_title = "Login Successful";
-                        $scope.m_body = "Welcome Mr. Danrie Duarte!";
+                        $scope.m_body = "Welcome "+ data.nam +"!";
                         $scope.$apply();
                         $("#myLogin").modal("show"); 
                     }else{
@@ -69,7 +68,6 @@
         }
 
         $scope.logout = function(){
-            $scope.update = false;
             localStorage.clear();
             location.reload();
             $scope.nav_click(0);
@@ -82,10 +80,7 @@
                     $scope.log = true;
                     $scope.$apply();
                 }else{
-                    $(".bg-l").css('visibility','visible');
-                    $scope.log = true;
-                    $scope.update = true;
-                    $scope.$apply();
+                    $("#modalEdit").modal("show");                              
                 }
             }
         });

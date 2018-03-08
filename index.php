@@ -82,7 +82,6 @@
                 <!-- Modal -->
                 <div id="myModal" class="modal fade" role="dialog">
                     <div class="modal-dialog">
-
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
@@ -93,9 +92,51 @@
                                 <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="submit();">Ok</button>
                             </div>
                         </div>
-
                     </div>
                 </div>  
+
+                <!--Modal: Edit From-->
+            <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog cascading-modal" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
+
+                                <!--Header-->
+                                <div class="modal-header light-blue darken-3 white-text">
+                                    <h4 class="title"><i class="fa fa-newspaper-o"></i> Edit Form</h4>
+                                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <!--Body-->
+                        <form method="post" id="editEmpForm" enctype="multipart/form-data">
+
+                                <div class="modal-body mb-0">
+
+                                <div class="md-form form-sm">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" ng-model="modusername" name="username" id="username" class="form-control">
+                                <label for="efname" style="height:20px;">Username</label>
+                            </div>
+
+                            <div class="md-form form-sm">
+                                        <i class="fa fa-lock prefix"></i>
+                                        <input type="password" name="password" id="password" class="form-control" maxlength = "20" minlength = "6">
+                                        <label for="password" style="height:20px;">Password</label>
+                            </div>
+                    
+
+                            <div class="text-center mt-1-half">
+                                <center><button class="btn btn-info mb-1" name="saveEdit" ng-click="accEdit();" >Save<i class="fa fa-check ml-1"></i></button></center>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+                    <!--/.Content-->
+                </div>
+            </div>
+                <!--Modal: Edit From-->
 
                 <!-- ADD ANNOUNCEMENT -->
                 <div id="myNews" class="modal fade" role="dialog">
@@ -608,10 +649,9 @@
                 </div>
             </div>  
 
-
             <div class="bg-l"></div>
             <center>
-                <form action="" class="form-group l-container" id="login" ng-hide="update">
+                <form action="" class="form-group l-container" id="login">
                     <img src="./img/wmsuresel.png" alt="WMSU RESEL LOGO" width="150" style="display: block;"><br>
                     <label for="">Username</label><br>
                     <input type="text" name="user" class="form-control" type="text"><br>
@@ -620,61 +660,12 @@
                     <input type="submit" class="btn myred" value="Login" ng-click="login();"><br>
                     <input type="button" class="btn myred" value="Cancel" ng-click="log = false;">                    
                 </form>
-                
-
-                <!-- ESTE EL UPDATE!!!! -->
-
-                <form action="" class="form-group l-container" id="update" ng-show="update">
-                    <img src="./img/wmsuresel.png" alt="WMSU RESEL LOGO" width="150" style="display: block;"><br>
-                    <input type="button" class="btn myred" value="Cancel" ng-click="log = false;">                                        
-                </form>
             </center>
 
             
         </div>
 
-        <!--Modal: Edit From-->
- <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog cascading-modal" role="document">
-        <!--Content-->
-        <div class="modal-content">
-
-                    <!--Header-->
-                    <div class="modal-header light-blue darken-3 white-text">
-                        <h4 class="title"><i class="fa fa-newspaper-o"></i> Edit Form</h4>
-                        <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <!--Body-->
-            <form method="post" id="editEmpForm" enctype="multipart/form-data">
-
-                    <div class="modal-body mb-0">
-
-                    <div class="md-form form-sm">
-                    <i class="fa fa-envelope prefix"></i>
-                    <input type="text" ng-model="modusername" name="username" id="username" class="form-control">
-                    <label for="efname" style="height:20px;">Username</label>
-                </div>
-
-                <div class="md-form form-sm">
-                            <i class="fa fa-lock prefix"></i>
-                            <input type="password" name="password" id="password" class="form-control" maxlength = "20" minlength = "6">
-                            <label for="password" style="height:20px;">Password</label>
-                </div>
         
-
-                <div class="text-center mt-1-half">
-                    <center><button class="btn btn-info mb-1" name="saveEdit" ng-click="accEdit();" >Save<i class="fa fa-check ml-1"></i></button></center>
-                </div>
-
-            </div>
-        </div>
-     </form>
-        <!--/.Content-->
-    </div>
-  </div>
-    <!--Modal: Edit From-->
 
       <script type="text/javascript" src="node_modules/mdb/jquery-3.2.1.min.js"></script>
 	  <script type="text/javascript" src="node_modules/mdb/mdb.js"></script>
