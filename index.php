@@ -29,6 +29,8 @@
                                 <h5 style="letter-spacing: 2px; margin-left: -50px;">WMSU RESEL</h5>
                                 <!-- NOT SURE IF MIDDLE OR LEFT -->
                             </div>
+                            <button ng-show="success" class="btn btn-danger" style="color: red; float: right; display: inline-block; background-color: #fff; display: absolute; right: 0;" ng-click="logout();"><span class="glyphicon glyphicon-log-out"></span> Logout</button>
+                            
                         </div>
                         </center>
                         <ul>
@@ -74,7 +76,6 @@
                             </li>
                             <li><a href="http://wmsuojs.byethost3.com" id="nav4">WMSU Journal</a></li>
                             <li><a href="" id="nav5" ng-click="nav_click(5);">Research Events and Announcement</a></li>
-                            <li ng-show="success"><button class="btn btn-danger" style="color: red; float: right; display: inline-block; background-color: #fff;" ng-click="logout();"><span class="glyphicon glyphicon-log-out"></span></button></li>
                         </ul> 
                     </nav>
                 </header>

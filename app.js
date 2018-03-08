@@ -40,7 +40,7 @@
                     if(data == true){
                         success = true;
                         $scope.m_title = "Login Successful";
-                        $scope.m_body = "Welcome "+ data.nam +"!";
+                        $scope.m_body = "Welcome !";
                         $scope.$apply();
                         $("#myLogin").modal("show"); 
                     }else{
@@ -59,6 +59,7 @@
 
         $scope.checkLogin = function(){
             if(success){
+                console.log('asd');
                 $scope.log = false;
                 $scope.success = true;
                 localStorage.setItem("success","true");
