@@ -609,13 +609,6 @@
             </div>  
 
 
-<<<<<<< HEAD
-
-=======
-            <!-- TAKI EL LOGIN AND UPDATE CHARD!!!! -->
-
-            <!-- LOGIN SECTION -->
->>>>>>> faf97473560dcde75ddefb966138b38e5a461d21
             <div class="bg-l"></div>
             <center>
                 <form action="" class="form-group l-container" id="login" ng-hide="update">
