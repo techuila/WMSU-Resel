@@ -1,6 +1,6 @@
 <?php
     // header('Content-type: application/json');
-    $connect = mysqli_connect('localhost','root','','wmsu');
+    include 'connect.php';
     $id = $_POST['res_id'];
     $sql = "DELETE FROM research WHERE res_id = '$id'";
 

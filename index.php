@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>WMSU Resel</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="./node_modules/angular/angular.min.js"></script> 
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>  
-        <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="icon" href="./img/wmsuresel.png">
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="node_modules/mdb/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="node_modules/mdb/mdb.js"></script>
+        <script type="text/javascript" src="node_modules/mdb/bootstrap.js"></script>
+	    <script type="text/javascript" src="node_modules/mdb/popper.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="css/mdb.css" />
         <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />              
         <link href="./css/style.css" rel="stylesheet">
-        <script src="./app.js"></script>
+        <script src="./node_modules/ckeditor/ckeditor.js"></script>
+        <script src="./app.js"></script>        
     </head>
     <body ng-app="myApp" ng-controller="myCtrl" ng-init="disp()">
         
         <div ng-hide="log">
             <div id="backgroundd" class="bg-reds bgg"></div>
-            <div class="container" style="margin-top: 20px;">
+            <div class="header">
+                <div class="container sub-header" style="margin: auto;">
+                    <span><a href="#!" class="dropdown-toggle loggedin" ng-click="showOpt();">Hi, {{username}}!</a></span>
+                    <ul class="q1">
+                        <li><a href="#!" ng-click="showEdit();">Edit Account</a></li>
+                        <hr>
+                        <li ng-click="logout();"><a href="#!">Logout</a></li>
+                    </ul>
+                    <!-- <button ng-show="success" class="btn btn-danger" style="color: red; float: right; display: inline-block; background-color: #fff; position: absolute; right: 0;" ng-click="logout();"><span class="glyphicon glyphicon-log-out"></span> Logout</button> -->
+                </div>
+            </div>
+            <div class="container" style="margin-top: 40px;">
                 <header style="height: 180px;">
                     <nav style="height: inherit; position: relative;">
                         <center>
@@ -27,19 +44,16 @@
                             <div style="display: inline-block; height: 150px; padding-top: 20px; color: #fff; margin-left: 10px; font-family: 'Raleway';">
                                 <h2 style="margin-top: 10px;">Research, Extension Services and External Linkages</h2>
                                 <h5 style="letter-spacing: 2px; margin-left: -50px;">WMSU RESEL</h5>
-                                <!-- NOT SURE IF MIDDLE OR LEFT -->
                             </div>
-                            <button ng-show="success" class="btn btn-danger" style="color: red; float: right; display: inline-block; background-color: #fff; display: absolute; right: 0;" ng-click="logout();"><span class="glyphicon glyphicon-log-out"></span> Logout</button>
-                            
                         </div>
                         </center>
                         <ul>
                             <li><a href="" id="nav0" ng-click="nav_click(0);">Overview</a></li>
                             <li><a href="" id="nav1" ng-click="nav_click(1);">Organizational Structure</a></li>
                             <li><a href="" id="nav2" ng-click="nav_click(2);">University Council</a></li>
-                            <li id="esteya"><a href="" id="nav3" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Offices <span class="caret"></span></a>
+                            <li id="esteya"><a href="" id="nav3" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Offices</a>
                             <ul class="dropdown-menu o1">
-                                <li class="dropitlow drop1 rad"><a href="" class="dropdown-toggle" data-togle="dropdown" data-hover="dropdown">Research Development and Evaluation Center (RDEC)</a>
+                                <li class="dropitlow drop1 rad"><a href="">Research Development and Evaluation Center (RDEC)</a>
                                     <ul class="dropdown-menu o2">
                                         <li class="dropitlow rad"><a id="nav10" href="" ng-click="nav_click(10);">Research Utilization, Publication and Information Dissemination (RUPID)</a></li>
                                         <hr>
@@ -86,8 +100,8 @@
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <h4 class="modal-title">Save Success</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="submit();">Ok</button>
@@ -102,41 +116,85 @@
                     <!--Content-->
                     <div class="modal-content">
 
-                                <!--Header-->
-                                <div class="modal-header light-blue darken-3 white-text">
-                                    <h4 class="title"><i class="fa fa-newspaper-o"></i> Edit Form</h4>
-                                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <!--Body-->
+                        <!--Header-->
+                        <div class="modal-header light-blue darken-3 white-text">
+                            <h4 class="title" style="font-size: 1em;"><i class="fa fa-newspaper-o"></i> Edit Account</h4>
+                            <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close" ng-click="editUsername = false; editName = false;">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!--Body-->
                         <form method="post" id="editEmpForm" enctype="multipart/form-data">
 
-                                <div class="modal-body mb-0">
+                            <div class="modal-body mb-0">
 
                                 <div class="md-form form-sm">
-                                <i class="fa fa-envelope prefix"></i>
-                                <input type="text" ng-model="modusername" name="username" id="username" class="form-control">
-                                <label for="efname" style="height:20px;">Username</label>
-                            </div>
+                                    <i class="fa fa-user prefix"></i>
+                                    <input style="font-size: 0.75em;" type="text" ng-show="editName" ng-model="modusername" name="uname" id="uname" class="form-control">
+                                    <label for="efname" style="margin-top:-25px; font-size: 0.75em;">Name</label>
+                                    <span id="editName" ng-hide="editName" style="margin-left: 20px;">{{username}}</span> 
+                                    <button id="editName_b" ng-click="editName_s();" class="btn btn-default mb-1 editAcc"><i class="fa fa-pencil" aria-hidden="true"></i> {{editName_b}}</button>
+                                    <button ng-click="editName_c();" ng-show="editName" class="btn btn-danger mb-1 editAcc"><i class="fa fa-close" aria-hidden="true"></i> Cancel</button>
+                                </div>
+                                <br>
+                                <div class="md-form form-sm">
+                                    <i class="fa fa-user prefix" aria-hidden="true"></i>
+                                    <input style="font-size: 0.75em;" type="text" ng-show="editUsername" name="password" id="username" class="form-control" maxlength = "20" minlength = "6">
+                                    <label for="username" style="margin-top:-25px; font-size: 0.75em;">Username</label>
+                                    <span id="editUser" ng-hide="editUsername" style="margin-left: 20px;">{{uname}}</span> 
+                                    <button id="editUser_b" ng-click="editUser_s();" class="btn btn-default mb-1 editAcc"><i class="fa fa-pencil" aria-hidden="true"></i> {{editUser_b}}</button>
+                                    <button ng-click="editUser_c();" ng-show="editUsername" class="btn btn-danger mb-1 editAcc"><i class="fa fa-close" aria-hidden="true"></i> Cancel</button>
+                                </div>
+                                <br>
+                                <p id="changePass" style="margin: -10px 0 25px 0;display: none;">Change Password</p>
+                                <div class="md-form form-sm" ng-show="editPass">
+                                    <i class="fa fa-lock prefix"></i>
+                                    <input type="password" id="oPassword" class="form-control" maxlength = "20" minlength = "4">
+                                    <label for="password" style="margin-top:-25px; font-size: 0.75em;">Old Password</label>
+                                </div>
+                                <div class="md-form form-sm" ng-show="editPass">
+                                    <i class="fa fa-lock prefix"></i>
+                                    <input type="password" id="nPassword" class="form-control" maxlength = "20" minlength = "4">
+                                    <label for="password" style="margin-top:-25px; font-size: 0.75em;">New Password</label>
+                                </div>
+                                <div class="md-form form-sm">
+                                    <i class="fa fa-lock prefix"></i>
+                                    <input ng-show="editPass" type="Password" name="password" id="cPassword" class="form-control" maxlength = "20" minlength = "4">
+                                    <label for="password" style="margin-top:-25px; font-size: 0.75em;">Password</label>
+                                    <span style="margin-left: 20px;" ng-hide="editPass">Change Password</span> 
+                                    <button id="editPass_b" ng-click="editPass_s();" class="btn btn-default mb-1 editAcc"><i class="fa fa-pencil" aria-hidden="true"></i> {{editPass_b}}</button>
+                                    <button ng-click="editPass_c();" ng-show="editPass" class="btn btn-danger mb-1 editAcc"><i class="fa fa-close" aria-hidden="true"></i> Cancel</button>
+                                </div>
+                        
 
-                            <div class="md-form form-sm">
-                                        <i class="fa fa-lock prefix"></i>
-                                        <input type="password" name="password" id="password" class="form-control" maxlength = "20" minlength = "6">
-                                        <label for="password" style="height:20px;">Password</label>
+                                <div class="text-center mt-1-half">
+                                    <!-- <center><button class="btn btn-success mb-1" name="saveEdit" ng-click="accEdit();" >Save<i class="fa fa-check ml-1"></i></button></center> -->
+                                </div>
                             </div>
-                    
-
-                            <div class="text-center mt-1-half">
-                                <center><button class="btn btn-info mb-1" name="saveEdit" ng-click="accEdit();" >Save<i class="fa fa-check ml-1"></i></button></center>
-                            </div>
-
-                        </div>
-                    </div>
-                </form>
+                        </form>
+                    </div>  
                     <!--/.Content-->
                 </div>
             </div>
+
+             <!-- Modal EDIT-->
+             <div id="mEdit" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">{{modal_h}}</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="modal-title">{{modal_b}}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
                 <!--Modal: Edit From-->
 
                 <!-- ADD ANNOUNCEMENT -->
@@ -177,11 +235,11 @@
                 <div class="overview" ng-hide="n_over">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
-                        <ol class="carousel-indicators">
+                        <!-- <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                             <li data-target="#myCarousel" data-slide-to="1"></li>
                             <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
+                        </ol> -->
                         
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
@@ -212,18 +270,21 @@
                         <br><br>
                         <center>
                             <h1>Overview </h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
-                            <form action="" id="overview">
+                            <button class="btn btn-default ex" ng-click="gay('over')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <form action="" id="overview" name="overview">
                                 <br> <br>   <br>   
                                 <div id="par">
                                     <div id="hitme"></div>
                                 </div> 
-                                <textarea ng-show="edit && success" name="textov" id="overview-text" cols="100" rows="10" class="form-control"></textarea>
+                        </center>
+                                <div class="" id="overview-text"></div>
+                                <!-- <textarea ng-show="edit && success" name="textov" id="overview-text" cols="100" rows="10" class="form-control"></textarea> -->
+                                <center>
                                 <br>
                                 <input ng-show="edit && success" class="btn btn-success"  ng-click="save_o()" name="ovsave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
+                                </center>
                             </form>
-                        </center>
                     </article>
                 </div>
 
@@ -235,7 +296,7 @@
                     <article>
                         <center>
                             <h1>Organizational Structure </h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('org')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <!-- <div class="photo-rect" ng-show="edit">
                                 <div class="bg-stats"></div>
                             </div> -->
@@ -244,9 +305,10 @@
                                 <div id="par1">
                                     <div id="hitme1"></div>
                                 </div> 
-                                <input type="file" name="image" id="add1" class="btn btn-default" style="display: none;">
-                                <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add1').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="textorg" id="organization-text" cols="100" rows="10" class="form-control"></textarea>
+                                <div id="organization-text"></div>
+                                <!-- <input type="file" name="image" id="add1" class="btn btn-default" style="display: none;"> -->
+                                <!-- <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add1').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button> -->
+                                <!-- <textarea ng-show="edit && success" name="textorg" id="organization-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
                                 <input ng-show="edit && success" class="btn btn-success"  ng-click="save_org()" name="orgsave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
@@ -263,7 +325,7 @@
                     <article>
                         <center>
                             <h1>University Council </h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('council')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <!-- <div class="photo-rect" ng-show="edit">
                                 <div class="bg-stats"></div>
                             </div> -->
@@ -272,9 +334,10 @@
                                 <div id="par2">
                                     <div id="hitme2"></div>
                                 </div> 
-                                <input type="file" name="image" id="add2" class="btn btn-default" style="display: none;">
+                                <div id="council-text"></div>
+                                <!-- <input type="file" name="image" id="add2" class="btn btn-default" style="display: none;">
                                 <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add2').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="textcouncil" id="council-text" cols="100" rows="10" class="form-control"></textarea>
+                                <textarea ng-show="edit && success" name="textcouncil" id="council-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
                                 <input ng-show="edit && success" class="btn btn-success"  ng-click="save_council()" name="councilsave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
@@ -296,15 +359,16 @@
                     <article>
                         <center>
                             <h1>Research Utilization, Publication and Information Dissemination (RUPID)</h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('rupid')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <form action="./php/saveRupid.php" method="POST" id="rupid" enctype="multipart/form-data">
                                 <br> <br>   <br>   
                                 <div id="par4">
                                     <div id="hitme10"></div>
                                 </div> 
-                                <input type="file" name="image" id="add10" class="btn btn-default" style="display: none;">
+                                <div id="rupid-text"></div>
+                                <!-- <input type="file" name="image" id="add10" class="btn btn-default" style="display: none;">
                                 <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add10').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="textrupid" id="rupid-text" cols="100" rows="10" class="form-control"></textarea>
+                                <textarea ng-show="edit && success" name="textrupid" id="rupid-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
                                 <input ng-show="edit && success" class="btn btn-success"  ng-click="save_rupid()" name="rupidsave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
@@ -321,15 +385,16 @@
                     <article>
                         <center>
                             <h1>Research Ethics Oversight Committee (REOC)</h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('reoc')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <form action="./php/saveReoc.php" method="POST" id="reoc" enctype="multipart/form-data">
                                 <br> <br>   <br>   
                                 <div id="par11">
                                     <div id="hitme11"></div>
                                 </div> 
-                                <input type="file" name="image" id="add11" class="btn btn-default" style="display: none;">
+                                <div id="reoc-text"></div>
+                                <!-- <input type="file" name="image" id="add11" class="btn btn-default" style="display: none;">
                                 <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add11').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="textreoc" id="reoc-text" cols="100" rows="10" class="form-control"></textarea>
+                                <textarea ng-show="edit && success" name="textreoc" id="reoc-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
                                 <input ng-show="edit && success" class="btn btn-success"  ng-click="save_reoc()" name="rupidsave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
@@ -346,17 +411,18 @@
                     <article>
                         <center>
                             <h1>Intellectual Property Unit/Innovation and Technology Support Office</h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('it')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <form action="./php/saveIt.php" method="POST" id="it" enctype="multipart/form-data">
                                 <br> <br>   <br>   
                                 <div id="par12">
                                     <div id="hitme12"></div>
                                 </div> 
-                                <input type="file" name="image" id="add12" class="btn btn-default" style="display: none;">
+                                <div id="it-text"></div>
+                                <!-- <input type="file" name="image" id="add12" class="btn btn-default" style="display: none;">
                                 <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add12').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="textit" id="it-text" cols="100" rows="10" class="form-control"></textarea>
+                                <textarea ng-show="edit && success" name="textit" id="it-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
-                                <input ng-show="edit && success" class="btn btn-success"  ng-click="it()" name="itsave" type="submit" value="Save">
+                                <input ng-show="edit && success" class="btn btn-success"  ng-click="save_it()" name="itsave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
                             </form>
                         </center>
@@ -371,17 +437,18 @@
                     <article>
                         <center>
                             <h1>Extension Non-Formal Education Course and Programs Office</h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('epo')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <form action="./php/saveEpo.php" method="POST" id="epo" enctype="multipart/form-data">
                                 <br> <br>   <br>   
                                 <div id="par13">
                                     <div id="hitme13"></div>
                                 </div> 
-                                <input type="file" name="image" id="add13" class="btn btn-default" style="display: none;">
+                                <div id="epo-text"></div>
+                                <!-- <input type="file" name="image" id="add13" class="btn btn-default" style="display: none;">
                                 <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add13').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="textepo" id="epo-text" cols="100" rows="10" class="form-control"></textarea>
+                                <textarea ng-show="edit && success" name="textepo" id="epo-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
-                                <input ng-show="edit && success" class="btn btn-success"  ng-click="epo()" name="eposave" type="submit" value="Save">
+                                <input ng-show="edit && success" class="btn btn-success"  ng-click="save_epo()" name="eposave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
                             </form>
                         </center>
@@ -396,17 +463,18 @@
                     <article>
                         <center>
                             <h1>Agricultural Education Outreach Program (AEOP)</h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('aepo')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <form action="./php/saveAepo.php" method="POST" id="aepo" enctype="multipart/form-data">
                                 <br> <br>   <br>   
                                 <div id="par14">
                                     <div id="hitme14"></div>
                                 </div> 
-                                <input type="file" name="image" id="add14" class="btn btn-default" style="display: none;">
+                                <div id="aepo-text"></div>
+                                <!-- <input type="file" name="image" id="add14" class="btn btn-default" style="display: none;">
                                 <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add14').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="textaepo" id="aepo-text" cols="100" rows="10" class="form-control"></textarea>
+                                <textarea ng-show="edit && success" name="textaepo" id="aepo-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
-                                <input ng-show="edit && success" class="btn btn-success"  ng-click="aepo()" name="aeposave" type="submit" value="Save">
+                                <input ng-show="edit && success" class="btn btn-success"  ng-click="save_aepo()" name="aeposave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
                             </form>
                         </center>
@@ -421,17 +489,18 @@
                     <article>
                         <center>
                             <h1>Community Outreach and Development Advocacy Program (CODAP)</h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('codap')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <form action="./php/saveCodap.php" method="POST" id="codap" enctype="multipart/form-data">
                                 <br> <br>   <br>   
                                 <div id="par15">
                                     <div id="hitme15"></div>
                                 </div> 
-                                <input type="file" name="image" id="add15" class="btn btn-default" style="display: none;">
+                                <div id="codap-text"></div>
+                                <!-- <input type="file" name="image" id="add15" class="btn btn-default" style="display: none;">
                                 <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add15').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="textcodap" id="codap-text" cols="100" rows="10" class="form-control"></textarea>
+                                <textarea ng-show="edit && success" name="textcodap" id="codap-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
-                                <input ng-show="edit && success" class="btn btn-success"  ng-click="codap()" name="codapsave" type="submit" value="Save">
+                                <input ng-show="edit && success" class="btn btn-success"  ng-click="save_codap()" name="codapsave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
                             </form>
                         </center>
@@ -446,17 +515,18 @@
                     <article>
                         <center>
                             <h1>Hands of Goodwill (HANDOG) Volunteer Center</h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('handog')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <form action="./php/saveHandog.php" method="POST" id="handog" enctype="multipart/form-data">
                                 <br> <br>   <br>   
                                 <div id="par16">
                                     <div id="hitme16"></div>
                                 </div> 
-                                <input type="file" name="image" id="add16" class="btn btn-default" style="display: none;">
+                                <div id="handog-text"></div>
+                                <!-- <input type="file" name="image" id="add16" class="btn btn-default" style="display: none;">
                                 <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add16').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="texthandog" id="handog-text" cols="100" rows="10" class="form-control"></textarea>
+                                <textarea ng-show="edit && success" name="texthandog" id="handog-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
-                                <input ng-show="edit && success" class="btn btn-success"  ng-click="handog()" name="handogsave" type="submit" value="Save">
+                                <input ng-show="edit && success" class="btn btn-success"  ng-click="save_handog()" name="handogsave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
                             </form>
                         </center>
@@ -471,17 +541,18 @@
                     <article>
                         <center>
                             <h1>Office of Alumni Affairs</h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('alumni')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <form action="./php/saveAlumni.php" method="POST" id="alumni" enctype="multipart/form-data">
                                 <br> <br>   <br>   
                                 <div id="par17">
                                     <div id="hitme17"></div>
                                 </div> 
-                                <input type="file" name="image" id="add17" class="btn btn-default" style="display: none;">
+                                <div id="alumni-text"></div>
+                                <!-- <input type="file" name="image" id="add17" class="btn btn-default" style="display: none;">
                                 <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add17').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="textalumni" id="alumni-text" cols="100" rows="10" class="form-control"></textarea>
+                                <textarea ng-show="edit && success" name="textalumni" id="alumni-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
-                                <input ng-show="edit && success" class="btn btn-success"  ng-click="alumni()" name="alumnisave" type="submit" value="Save">
+                                <input ng-show="edit && success" class="btn btn-success"  ng-click="save_alumni()" name="alumnisave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
                             </form>
                         </center>
@@ -496,17 +567,18 @@
                     <article>
                         <center>
                             <h1>Career Placement and Public Employment Service Office</h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('public')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <form action="./php/savepPublic.php" method="POST" id="public" enctype="multipart/form-data">
                                 <br> <br>   <br>   
                                 <div id="par18">
                                     <div id="hitme18"></div>
                                 </div> 
-                                <input type="file" name="image" id="add18" class="btn btn-default" style="display: none;">
+                                <div id="public-text"></div>
+                                <!-- <input type="file" name="image" id="add18" class="btn btn-default" style="display: none;">
                                 <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add18').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="textpublic" id="public-text" cols="100" rows="10" class="form-control"></textarea>
+                                <textarea ng-show="edit && success" name="textpublic" id="public-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
-                                <input ng-show="edit && success" class="btn btn-success"  ng-click="public()" name="publicsave" type="submit" value="Save">
+                                <input ng-show="edit && success" class="btn btn-success"  ng-click="save_public()" name="publicsave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
                             </form>
                         </center>
@@ -521,17 +593,18 @@
                     <article>
                         <center>
                             <h1>International Linkage Office</h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('linkage')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <form action="./php/savepLinkage.php" method="POST" id="linkage" enctype="multipart/form-data">
                                 <br> <br>   <br>   
                                 <div id="par19">
                                     <div id="hitme19"></div>
                                 </div> 
-                                <input type="file" name="image" id="add19" class="btn btn-default" style="display: none;">
+                                <div id="linkage-text"></div>
+                                <!-- <input type="file" name="image" id="add19" class="btn btn-default" style="display: none;">
                                 <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add19').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="textlinkage" id="linkage-text" cols="100" rows="10" class="form-control"></textarea>
+                                <textarea ng-show="edit && success" name="textlinkage" id="linkage-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
-                                <input ng-show="edit && success" class="btn btn-success"  ng-click="linkage()" name="linkagesave" type="submit" value="Save">
+                                <input ng-show="edit && success" class="btn btn-success"  ng-click="save_linkage()" name="linkagesave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
                             </form>
                         </center>
@@ -546,17 +619,18 @@
                     <article>
                         <center>
                             <h1>University-Industry Relations Office</h1><span ng-show="edit && success" style="color: #a4a4a4">(Edit)</span>
-                            <button class="btn btn-default ex" ng-click="gay()" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
+                            <button class="btn btn-default ex" ng-click="gay('industry')" ng-hide="edit"><span class="glyphicon glyphicon-pencil"></span> Edit</span></button>
                             <form action="./php/savepIndustry.php" method="POST" id="industry" enctype="multipart/form-data">
                                 <br> <br>   <br>   
                                 <div id="par20">
                                     <div id="hitme20"></div>
                                 </div> 
-                                <input type="file" name="image" id="add20" class="btn btn-default" style="display: none;">
+                                <div id="industry-text"></div>
+                                <!-- <input type="file" name="image" id="add20" class="btn btn-default" style="display: none;">
                                 <button style="float: left;" type="button" ng-show="edit && success" class="btn btn-default" onclick="document.getElementById('add20').click();"><span class="glyphicon glyphicon-picture"></span> Add Photo</button>
-                                <textarea ng-show="edit && success" name="textindustry" id="industry-text" cols="100" rows="10" class="form-control"></textarea>
+                                <textarea ng-show="edit && success" name="textindustry" id="industry-text" cols="100" rows="10" class="form-control"></textarea> -->
                                 <br>
-                                <input ng-show="edit && success" class="btn btn-success"  ng-click="industry()" name="industrysave" type="submit" value="Save">
+                                <input ng-show="edit && success" class="btn btn-success"  ng-click="save_industry()" name="industrysave" type="submit" value="Save">
                                 <button ng-show="edit && success" class="btn btn-default" ng-click="cancel_o()" type="button">Cancel</button>                    
                             </form>
                         </center>
@@ -627,8 +701,8 @@
                 </div>
             </footer>
         </div>
-        <div class="login" ng-show="log">
 
+        <div class="login" ng-show="log">
             <!-- Modal FOR LOGIN -->
             <div id="myLogin" class="modal fade" role="dialog">
                 <div class="modal-dialog">
@@ -636,8 +710,8 @@
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h4 class="modal-title">{{ m_title }}</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
                             <p>{{ m_body }}</p>
@@ -652,25 +726,16 @@
 
             <div class="bg-l"></div>
             <center>
-                <form action="" class="form-group l-container" id="login">
+                <form action="" class="form-group l-container" id="login" name="login">
                     <img src="./img/wmsuresel.png" alt="WMSU RESEL LOGO" width="150" style="display: block;"><br>
                     <label for="">Username</label><br>
                     <input type="text" name="user" class="form-control" type="text"><br>
                     <label for="">Password</label><br>
-                    <input type="password" name="pass" class="form-control" id="inputdefault" type="text"><br>
-                    <input type="submit" class="btn myred" value="Login" ng-click="login();"><br>
+                    <input type="password" name="pass" class="form-control" id="inputdefault"><br>
+                    <a href="#!" class="btn myred" ng-click="signin();">Login</a><br>
                     <input type="button" class="btn myred" value="Cancel" ng-click="log = false;">                    
                 </form>
             </center>
-
-            
-        </div>
-
-        
-
-      <script type="text/javascript" src="node_modules/mdb/jquery-3.2.1.min.js"></script>
-	  <script type="text/javascript" src="node_modules/mdb/mdb.js"></script>
-	  <script type="text/javascript" src="node_modules/mdb/bootstrap.js"></script>
-	  <script type="text/javascript" src="node_modules/mdb/popper.min.js"></script>
+        </div>        
     </body>
 </html>

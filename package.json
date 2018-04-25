@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^1.0.0-beta.4"
+  },
+  "devDependencies": {
+    "@ckeditor/ckeditor5-alignment": "^1.0.0-beta.4"
+  }
 }

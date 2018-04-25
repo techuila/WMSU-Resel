@@ -1,11 +1,10 @@
 @keyframes in-loc-nav{
     from{
         color: #f9f9f9;
-        
     }
     to{
-        color: #2c3e50;
-        border-bottom: 3px solid #2c3e50;        
+        color: #2BBBAD;
+        border-bottom: 3px solid #2BBBAD;        
     }
 }
 
@@ -35,6 +34,14 @@ body{
     font-size: 1.7em;
 }
 
+.btn{
+	font-size: 0.75em;
+}
+
+.form-control{
+	font-size: 0.75em;
+}
+
 img{
     margin: 4% 0;
 }
@@ -45,7 +52,8 @@ pre{
     white-space: pre-wrap; 
     word-wrap: break-word;
     font-family: "Roboto";
-    text-align: justify;
+	text-align: justify;
+	padding: 0 30px;
     overflow: hidden;
     font-size: 0.9em;    
     border: none;
@@ -63,7 +71,7 @@ pre{
 
 .bg-reds{
     background-image: url('../img/red.jpg');
-    background-size: 100% 850px;    
+    background-size: 100% 100%;    
     
 }
 
@@ -127,6 +135,68 @@ hr{
     margin: 0;
 }
 
+.header{
+	position: fixed;
+	top: 0;
+	height: 45px;
+	width: 100%;
+	z-index: 999;
+	background-color: #990000;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+	display: none; 
+}
+
+.q1{
+	top: 40px;
+	position: fixed;
+	list-style: none;
+	background-color: #f9f9f9;
+	border-radius: 2px;
+	width: 150px;
+	display: none;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+
+.q1 > li >a{
+	display: block;
+	padding-right: 10px;
+	margin: 7px 0;
+	color: #990000;	
+	height: 30px;
+	width: 100%;
+	font-size: 0.75em;
+}
+
+.q1 > li > a:hover{
+	background-color: #d9d9d9;
+}
+
+.q1 > li{
+	text-align: right;
+}
+
+.editAcc{
+	height: 30px;
+	width: 65px;
+	padding: 0;
+	font-size: 0.6em;
+}
+
+.sub-header{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.loggedin{
+	color: #fff;
+	display: inline-block;
+	margin-top: 8px;
+}
+
+.loggedin:hover{
+	color: rgb(193, 193, 193);
+}
+
 .dropitlow{
     margin: 0;
     width: 100%;
@@ -148,7 +218,8 @@ hr{
 .dropitlow a{
     display: inline-block;
     background-color: #fff;
-    height: 40px;
+	height: 40px;
+	font-size: 1.3em;
 }
 
 .dropdown-menu .o2,
@@ -175,7 +246,8 @@ hr{
     top: 80%;
 }
 
-.dropdown-menu li a:hover{
+.dropdown-menu li a:hover,
+.dropdown-menu li ul li:hover{
     color: #e6324b;
     background-color: #fff;
 }
@@ -218,6 +290,10 @@ article h1{
 
 article{
     padding: 0 5%;
+}
+
+.navs{
+	outline: none;
 }
 
 .ex{
@@ -274,14 +350,14 @@ article{
 }
 
 footer{
-    background-color: #e6324b;
+    background-color: #990000;
     /* padding-top: 50px; */
     font-size: 0.82em;
-    margin-top: 100px;
+	margin-top: 100px;
+	padding-top: 10px;
     color: white;
     height: 180px;
     width: 100%;
-    
 }
 
 footer a:hover{
@@ -309,7 +385,7 @@ footer a{
 }
 
 footer a:hover{
-    color:  #2c3e50;
+    color:  #2BBBAD;
 }
 
 /* =====================================================
@@ -345,8 +421,12 @@ footer a:hover{
 }
 
 .myred{
-    width: 100%;
+	width: 100%;
     display: block;
+}
+
+input[type="text"]{
+	font-size: 0.8em;
 }
 
 label{

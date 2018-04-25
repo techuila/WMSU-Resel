@@ -1,7 +1,6 @@
 <?php 
-    header('Content-type: application/json');
-    $connect = mysqli_connect("localhost", "root", "", "wmsu"); 
-  
+    include 'connect.php';    
+    header('Content-type: application/json');  
 
     $sql = "SELECT * FROM organization_structure WHERE os_id = 1";
     $result = mysqli_query($connect,$sql);

@@ -1,5 +1,5 @@
 <?php
-    $connect = mysqli_connect("localhost","root","","wmsu");
+    include 'connect.php';
     $id = $_POST["secrets"];
     $title = $_POST["title"];
     $content = $_POST["content"];

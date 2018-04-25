@@ -1,7 +1,6 @@
 <?php 
+    include 'connect.php';    
     header('Content-type: application/json');
-    $connect = mysqli_connect("localhost", "root", "", "wmsu"); 
-  
 
     $sql = "SELECT * FROM wmsu_journal WHERE wj_id = 1";
     $result = mysqli_query($connect,$sql);

@@ -1,26 +1,37 @@
 <?php 
-    header('Content-type: application/json');
-    $connect = mysqli_connect("localhost", "root", "", "wmsu"); 
-  
+    // header('Content-type: application/json');
+    $host = 'localhost';
+    $db = 'wmsu';
+    $username = 'root';
+    $password = '';
+    $charset = 'utf8mb4';
+    
+    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+    $opt = [
+        PDO::ATTR_ERRMODE               => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE    => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES      => false,
+    ];
+    $pdo = new PDO($dsn, $username, $password, $opt);
+
     $user = $_POST['user'];
     $pass = $_POST['pass'];
 
-    $sql = "SELECT * FROM account WHERE user = '$user' AND pass = '$pass'";
-    $result = mysqli_query($connect,$sql);
+    $preparedStatement = $pdo -> prepare("SELECT * FROM account WHERE user = ? AND pass = ?");
+    $preparedStatement -> execute([$user, $pass]);
 
 
-    if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-            $banner = true;
-            // $banner['nam'] = $row['nam'];
-        
+    if ($preparedStatement -> rowCount() > 0) {
+        $login['status'] = true;
+        foreach($preparedStatement as $row){
+            $login['username'] = $row['nam'];
+            $login['uname'] = $row['user'];
+            $login['pass'] = $row['pass'];
         }
-        // print_r($food);
     } else{
-        $banner = false;
+        $login['status'] = false;
     }
-    echo json_encode($banner);
+    echo json_encode($login);
    
 
 ?>

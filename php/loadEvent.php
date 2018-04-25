@@ -1,6 +1,7 @@
 <?php
+    include 'connect.php';    
     header('Content-type: application/json');
-    $connect = mysqli_connect("localhost","root","","wmsu");
+
     $sql = "SELECT * FROM research";
     $result = mysqli_query($connect,$sql);
 
