@@ -1,7 +1,8 @@
 <!--
---- Readme.md Snippet without images Start ---
+&lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
 techuila/WMSU-Resel is built on the following main stack:
+
 - [Chartio](https://chartio.com) – Business Intelligence
 - [RequireJS](http://requirejs.org/) – Front End Package Manager
 - [Ruby](https://www.ruby-lang.org) – Languages
@@ -27,11 +28,13 @@ techuila/WMSU-Resel is built on the following main stack:
 - [ent](https://entgo.io/) – Object Relational Mapper (ORM)
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet without images End ---
 
---- Readme.md Snippet with images Start ---
+&lt;--- Readme.md Snippet without images End ---&gt;
+
+&lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
 techuila/WMSU-Resel is built on the following main stack:
+
 - <img width='25' height='25' src='https://img.stackshare.io/service/9/TtrFaQ3j_400x400.png' alt='Chartio'/> [Chartio](https://chartio.com) – Business Intelligence
 - <img width='25' height='25' src='https://img.stackshare.io/service/852/1781835.png' alt='RequireJS'/> [RequireJS](http://requirejs.org/) – Front End Package Manager
 - <img width='25' height='25' src='https://img.stackshare.io/service/989/ruby.png' alt='Ruby'/> [Ruby](https://www.ruby-lang.org) – Languages
@@ -57,14 +60,15 @@ techuila/WMSU-Resel is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/21146/default_3b393819f74c4cb10f98fa9e683fa28cf6cc85f5.png' alt='ent'/> [ent](https://entgo.io/) – Object Relational Mapper (ORM)
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet with images End ---
+
+&lt;--- Readme.md Snippet with images End ---&gt;
 -->
 <div align="center">
 
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [techuila/WMSU-Resel](https://github.com/techuila/WMSU-Resel)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|94<br/>Tools used|11/15/23 <br/>Report generated|
+|96<br/>Tools used|01/05/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -349,9 +353,9 @@ Full tech stack [here](/techstack.md)
 </table>
 
 
-## <img src='https://img.stackshare.io/group.svg' /> Open source packages (63)</h2>
+## <img src='https://img.stackshare.io/group.svg' /> Open source packages (65)</h2>
 
-## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (63)
+## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (65)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
@@ -387,6 +391,7 @@ Full tech stack [here](/techstack.md)
 |[he](https://www.npmjs.com/he)|N/A|12/27/17|nerdcorez |MIT|N/A|
 |[http](https://www.npmjs.com/http)|N/A|12/27/17|nerdcorez |BSD-2-Clause|N/A|
 |[https](https://www.npmjs.com/https)|N/A|12/27/17|nerdcorez |ISC|N/A|
+|[husky](https://www.npmjs.com/husky)|v0.11.4|12/27/17|nerdcorez |MIT|N/A|
 |[i](https://www.npmjs.com/i)|N/A|12/27/17|nerdcorez |MIT|N/A|
 |[ink](https://www.npmjs.com/ink)|N/A|12/27/17|nerdcorez |MIT|N/A|
 |[intern](https://www.npmjs.com/intern)|N/A|12/27/17|nerdcorez |BSD-3-Clause|N/A|
@@ -414,6 +419,7 @@ Full tech stack [here](/techstack.md)
 |[step](https://www.npmjs.com/step)|N/A|12/27/17|nerdcorez |MIT|N/A|
 |[strip-json-comments](https://www.npmjs.com/strip-json-comments)|v2.0.1|12/27/17|nerdcorez |MIT|N/A|
 |[tar](https://www.npmjs.com/tar)|N/A|12/27/17|nerdcorez |ISC|N/A|
+|[test](https://www.npmjs.com/test)|N/A|12/27/17|nerdcorez |MIT|N/A|
 |[tmp](https://www.npmjs.com/tmp)|N/A|12/27/17|nerdcorez |MIT|N/A|
 |[uglify](https://www.npmjs.com/uglify)|N/A|12/27/17|nerdcorez |MIT|N/A|
 |[url](https://www.npmjs.com/url)|N/A|12/27/17|nerdcorez |MIT|N/A|
@@ -422,4 +428,4 @@ Full tech stack [here](/techstack.md)
 <br/>
 <div align='center'>
 
-Generated via [Stack File](https://github.com/apps/stack-file)
+Generated via [Stack File](https://github.com/marketplace/stack-file)
