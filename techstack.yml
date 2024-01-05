@@ -1,11 +1,12 @@
 repo_name: techuila/WMSU-Resel
 report_id: 4e70020aeaa6f60807d70d7c80fc9476
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-15T06:29:36+00:00'
+timestamp: '2024-01-05T08:42:01+00:00'
 requested_by: techuila
 provider: github
 branch: master
-detected_tools_count: 94
+detected_tools_count: 96
 tools:
 - name: CSS 3
   description: The latest evolution of the Cascading Style Sheets language
@@ -15,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel
   detection_source: Repo Metadata
 - name: D
   description: Modern convenience. Modeling power. Native efficiency.
@@ -24,7 +26,8 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/3117/d-5.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: Hack
@@ -36,6 +39,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1208/download.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel
   detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -46,6 +50,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/techuila/WMSU-Resel
   detection_source: Repo Metadata
 - name: PHP
   description: A popular general-purpose scripting language that is especially suited
@@ -56,6 +61,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source_url: https://github.com/techuila/WMSU-Resel
   detection_source: Repo Metadata
 - name: Python
   description: A clear and powerful object-oriented programming language, comparable
@@ -66,6 +72,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -78,6 +85,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -89,6 +97,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/wmsu.sql
   detection_source: wmsu.sql
 - name: C3.js
   description: A D3-based reusable chart library
@@ -99,6 +108,7 @@ tools:
   category: Libraries
   sub_category: Charting Libraries
   image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
   detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -111,7 +121,8 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: jQuery
@@ -123,7 +134,8 @@ tools:
   category: Libraries
   sub_category: Javascript UI Libraries
   image_url: https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/bower.json
+  detection_source: node_modules/jquery/bower.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: ent
@@ -135,7 +147,8 @@ tools:
   category: Data Stores
   sub_category: Microframeworks (Backend)
   image_url: https://img.stackshare.io/service/21146/default_3b393819f74c4cb10f98fa9e683fa28cf6cc85f5.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: ws
@@ -147,7 +160,8 @@ tools:
   category: Application Hosting
   sub_category: Realtime Backend / API
   image_url: https://img.stackshare.io/service/11381/no-img-open-source.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: Babel
@@ -159,6 +173,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: JavaScript Compilers
   image_url: https://img.stackshare.io/service/2739/-1wfGjNw.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -171,6 +186,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -182,6 +198,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel
   detection_source: Repo Metadata
 - name: PyPI
   description: A repository of software for the Python programming language
@@ -191,6 +208,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Hosted Package Repository
   image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -203,6 +221,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Javascript Testing Framework
   image_url: https://img.stackshare.io/service/1421/b706f022230831a3d391db504a139e21.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -215,7 +234,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/852/1781835.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -227,6 +246,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/service/12795/5jL6-BA5_400x400.jpeg
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -239,7 +259,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Javascript Testing Framework
   image_url: https://img.stackshare.io/service/3509/logo.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -253,7 +273,8 @@ tools:
   category: Build, Test, Deploy
   sub_category: Git Tools
   image_url: https://img.stackshare.io/no-img-open-source.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: jsdom
@@ -267,7 +288,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Headless Browsers
   image_url: https://img.stackshare.io/service/7054/preview.jpeg
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -279,7 +300,8 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: Chartio
@@ -290,7 +312,8 @@ tools:
   category: Analytics
   sub_category: Business Intelligence
   image_url: https://img.stackshare.io/service/9/TtrFaQ3j_400x400.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: OpenLayers
@@ -302,7 +325,8 @@ tools:
   category: Application Utilities
   sub_category: Mapping APIs
   image_url: https://img.stackshare.io/service/3208/397ce8027eb036960f00dd5153d41993.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: Q
@@ -315,8 +339,8 @@ tools:
   category: Libraries
   sub_category: Javascript Utilities & Libraries
   image_url: https://img.stackshare.io/service/4697/default_2d5a1d7c5eb520cdeb7db120e767345004a1d0d4.png
-  detection_source_url: node_modules/jquery/package.json
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: React Navigation
@@ -328,6 +352,7 @@ tools:
   category: Mobile
   sub_category: Cross-Platform Mobile Tools
   image_url: https://img.stackshare.io/service/6422/react-navigation.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -336,6 +361,7 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/9527/5502029.jpeg
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -344,7 +370,8 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/5588/jscom.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: test
@@ -352,7 +379,8 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/5477/no-img-open-source.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: "@octokit/rest"
@@ -364,7 +392,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16999/default_43f23668e39c9b3381720c9c76540776b8a49167.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: angular
@@ -376,6 +405,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16174/default_351a89f21bfb241e8dabeb1444cf56f529948708.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
   detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -388,7 +418,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17564/default_99afdc7126f8a31ae778ef58d50c93ae3dd88880.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: args
@@ -400,7 +431,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18244/default_b102609c7a7fb86f3c2ca3ec026f3011d275978b.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: assert
@@ -412,6 +444,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16188/default_9a7a7dcd69c12c746dc4000dc4d1b75758079c9f.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -424,6 +457,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15883/default_0b10af8ca19c215f781dc07442e75bdc831089d0.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -437,7 +471,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15805/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -451,6 +485,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17221/default_183829c5079b84333a720d8590a328efc043ba0e.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -463,7 +498,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17384/default_b39374c3a74b433364bfdbff07be26214bf186fd.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: co
@@ -475,7 +511,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16007/default_f8be85789693a9901dbcfa43c135c60525ae49a1.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: component
@@ -487,6 +524,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18220/default_46cc7e5b7a8c78af11a3ee7db2fc5fe39f295a6e.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -499,6 +537,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17998/default_fc5f66cf44024e173fd07c415d4f30ca58b4cbad.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -511,6 +550,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16353/default_b5c8f3c8e46d368f74a982d06d7f13291fe651ea.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -523,6 +563,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17538/default_1922051267fa78212ab6eb1238cdf6aab8771493.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -536,7 +577,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15869/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -550,7 +591,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16069/default_5fd43aeff4d6a935abc13737de01a0355210499d.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -563,6 +604,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16045/default_a9b6ac3c2fe43713f9a8e43d4668d0352ad0d247.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -576,6 +618,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16098/default_63a34654baee757196ddff2457bd1c9a0dfb7287.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -588,6 +631,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16804/default_55e3ea76a7929df1b71c5ea0c9b4130cc87323a4.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -601,7 +645,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15835/default_0b10af8ca19c215f781dc07442e75bdc831089d0.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -634,7 +678,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16633/default_783b9b6c17b863f264c1418b0eb831316f741afd.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -648,7 +692,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16021/default_924b66c04aa848a4028c1a5753a23dae0f835f86.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -662,7 +706,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15954/default_ac622bc364a601d766b9a6f6039f191492f54d65.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -676,7 +720,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15932/default_4dc9671df0093fd7061f6455afdf054e6cc9dacb.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -690,7 +734,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16384/default_9ae0e75ed749aca83d89f7e1ccb309be2bfc610e.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -704,7 +748,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17749/default_8cfeb169319d5cc646c1e13f8a10e7d7e7430d7c.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -719,7 +763,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17008/default_d17bbf7e4f3b102e29ff09c01b8165e7ba600319.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -732,6 +776,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17652/default_eb9caf7d7fb4d231f7e3b04a8c1fbef6fcd9fd73.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -744,7 +789,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18039/image.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: he
@@ -756,7 +802,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17059/default_31b594d049ba66ce98c924544ccc4329a3f2d530.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: http
@@ -767,7 +814,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16874/default_768abdabb94806c932ace6262b6bbc8241907245.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: https
@@ -779,6 +827,21 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17546/default_8d32936cb624bf7f51657c1540463db0a3c4106e.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
+  last_updated_by: nerdcorez
+  last_updated_on: 2017-12-27 21:46:58.000000000 Z
+- name: husky
+  description: Prevents bad commit or push
+  package_url: https://www.npmjs.com/husky
+  version: 0.11.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15831/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -791,7 +854,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17326/default_66bbb2a75a0234b1bfceaa99b8e82825fa7b8284.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: ink
@@ -803,7 +867,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17838/default_abcc2eea82e62d338a749f334647866df76198b8.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: intern
@@ -815,6 +880,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18437/default_7c0bc528b9c47f5cc09b0c87021a81c8d72b33f3.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -827,7 +893,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16483/default_fc6e1fc17e404d936593b5b901d67abb3386daa3.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: is
@@ -839,7 +906,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17544/default_e665c133253b5cd434c1991167ebd25dc68f1c17.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: jsonlint
@@ -851,6 +919,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17358/default_66bbb2a75a0234b1bfceaa99b8e82825fa7b8284.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -864,7 +933,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16062/default_924b66c04aa848a4028c1a5753a23dae0f835f86.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -877,6 +946,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16565/default_536789d2630ed352dc721a1c915ab456b7660201.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -889,7 +959,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17983/default_fc5f66cf44024e173fd07c415d4f30ca58b4cbad.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: np
@@ -901,7 +972,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16247/default_5dfc1810d0882ab844578a326bb8bf19e45e7227.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: npm
@@ -913,7 +985,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16105/default_5a461d436012a0c4024534aaba303dcdb0297d24.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: ol
@@ -925,7 +998,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18695/default_ba22650903e999378ab35f8093d2d808f0a46039.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: os
@@ -937,7 +1011,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17784/default_b760b4f955878b0055c02bde0608c2f01e7d4f4f.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: phantom
@@ -949,7 +1024,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17469/default_2a4dc012d9584af49ba34825451ae7a5a8d75e4b.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: promise
@@ -961,6 +1037,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16093/default_5a461d436012a0c4024534aaba303dcdb0297d24.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -974,7 +1051,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18159/default_63cbe387694d6d77dde61448de98c6bd2a9b18de.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -988,7 +1065,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16684/default_e3c0987b80983280e46e6e1723fcfcff50fa4824.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -1001,6 +1078,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16813/default_5c6919c5e02b8e6c83f3a2b23db5b6962e3caca0.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
   detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -1013,7 +1091,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17342/default_66bbb2a75a0234b1bfceaa99b8e82825fa7b8284.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: ref
@@ -1025,6 +1104,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18418/default_4d27e57a415c059481cbe1fd0734523c261d311a.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -1037,7 +1117,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15823/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: resolve
@@ -1049,7 +1130,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16128/default_63a34654baee757196ddff2457bd1c9a0dfb7287.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: s3
@@ -1061,6 +1143,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18491/default_0f684fdba52879fd48ceb8876e4283627899355a.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
   detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -1073,7 +1156,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18455/default_d8e945bfec4c4a608fb0493abf73c9ec1cffc9a2.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: step
@@ -1085,6 +1169,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18191/default_b56a957d927d2e40d2c7cf9f3588b95c4df2c97c.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -1098,7 +1183,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16973/default_caea01ce44a5fd1bb200d8fc0f8f2a1695b4e569.png
-  detection_source_url: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -1111,7 +1196,21 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16466/default_fc6e1fc17e404d936593b5b901d67abb3386daa3.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
+  last_updated_by: nerdcorez
+  last_updated_on: 2017-12-27 21:46:58.000000000 Z
+- name: test
+  description: ''
+  package_url: https://www.npmjs.com/test
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18204/default_329699d382cad74e0d389300999bd267b9699d3f.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: tmp
@@ -1123,7 +1222,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16251/default_380ae3d73e22c7ca1f42b96479bcd0095dabc0d3.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: uglify
@@ -1135,6 +1235,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18097/image.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
@@ -1147,7 +1248,8 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16462/default_89ba91277e3434b03295bb11d22736632df1d04f.png
-  detection_source: node_modules/jquery/package.json
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/angular/package.json
+  detection_source: node_modules/angular/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
 - name: watch
@@ -1159,6 +1261,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16280/default_97104dc50154593d2dde1d791400955934c9c715.png
+  detection_source_url: https://github.com/techuila/WMSU-Resel/blob/master/node_modules/jquery/package.json
   detection_source: node_modules/jquery/package.json
   last_updated_by: nerdcorez
   last_updated_on: 2017-12-27 21:46:58.000000000 Z
